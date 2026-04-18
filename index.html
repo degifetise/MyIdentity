@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div class="backToTop">
+    <button id="backToTop" type="button" title="btn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/image/degife.jpg" alt="logo-image" />
+    </div>
+    <div class="bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#project">Project</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="right-navbar">
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+
+      <div class="resume-btn">
+        <a href="/Cv/my cv.pdf">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section" id="home">
+    <div class="header-container">
+      <div class="header-image">
+        <div class="img-container">
+          <img src="/image/degife.jpg" alt="" />
+        </div>
+        <div class="call-to-cation-btn">
+          <a href="#project" class="view-my-works common">View My work</a>
+          <a href="#contact" class="hire-me common">Hire me</a>
+        </div>
+      </div>
+      <div class="header-content">
+        <h2 class="main-header">Hello, <span>I'm Degife Tise</span></h2>
+        <h3 class="title">
+          I'm a <span>Frontend developer | UI/UX Designers</span>
+        </h3>
+
+        <p class="sub-header">
+          Building scalable websites and web apps with focus on user need &
+          experiences.
+        </p>
+
+        <div class="get-me-on-touch">
+          <div class="call-to-action-text">
+            <span>Get me on touch
+              <i class="fas fa-arrow-right animate-arrow"></i>
+            </span>
+          </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/degife-tise-a42878351" rel="noopener" target="_blank" title="link"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://orcid.org/0009-0002-9865-635X" rel="noopener" title="link" target="_blank"><i
+                class="fab fa-github"></i></a>
+            <a href="mailto:degifetise09@gmail.com" target="_blank" rel="noopener" title="link"><i
+                class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about-me reveal">
+    <div class="about-me-container">
+      <div class="about-me-title">
+        <h2 class="section-title">About me</h2>
+      </div>
+      <div class="about-me-text-box">
+        <p class="about-me-text">
+          Hello, i'm degife tise from ethiopia and i am passionate front-end
+          developers and UI/UX designers using and modern front end frameworks
+          like, react, tailwind css. I love solve real world problems by using
+          this modern frontend frameworks, also i build websites and web apps
+          based on user experiences.
+        </p>
+
+        <p class="my-education">
+          <i class="fas fa-graduation-cap"></i>
+          & 3rd year IT students in Ethiopia hawassa university with great
+          distinction.
+        </p>
+        <p class="my-education">
+          <i class="fas fa-users"></i>
+          Member of hawassa university Huwai programers group and peace club.
+        </p>
+      </div>
+      <!-- what should i add here to make it modern -->
+      <div class="about-me-tech-stack">
+        <div class="skill-language">
+          <h4 class="skill-title">Tech of my skills.</h4>
+          <div class="skill-list">
+            <span>React</span>
+            <span>Github</span>
+            <span>PHP</span>
+            <span>MYSQL</span>
+            <span>Tailwind</span>
+            <span>Git</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>OOP Java</span>
+          </div>
+        </div>
+
+        <div class="problem-solving-skill">
+          <h4 class="skill-title">Problem solving skill.</h4>
+          <div class="problem-solving-skill-list">
+            <div class="skill-div">
+              <span class="skill-name">Communication</span>
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-div">
+              <span class="skill-name">Critical Thinking</span>
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-div">
+              <span class="skill-name">Complex problem solving</span>
+              <div class="skill-bar">
+                <div class="skill-fill"></div>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- experience section -->
+
+  <section id="experience" class="experience-section reveal">
+    <div class="experience-container">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-timeline">
+
+        <div class="experience-item">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h3>Front-End Developer</h3>
+            <p class="exp-year">2024-present</p>
+            <p class="exp-desc">Building modern, responsive, and animated web interfaces using React, Tailwind CSS, and
+              GSAP.</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h3>Student Group Leader</h3>
+            <p class="exp-year">2025-present</p>
+            <p class="exp-desc">Leading tech-focused student groups, teaching web development, and organizing workshops.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h3>UI/UX Designers</h3>
+            <p class="exp-year">present now</p>
+            <p class="exp-desc">Designing user-centered interfaces and improving user experiences through research and
+              prototyping.</p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="exp-dot"></div>
+          <div class="exp-content">
+            <h3>Eagle Tutors</h3>
+            <p class="exp-year">2025-present</p>
+            <p class="exp-desc">Teaching children KG-to-University students online and making complex hard topic simple
+              and easy for to understand.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- project section -->
+
+  <section id="project" class="project-section reveal">
+    <div class="project-section-container">
+      <h2 class="section-title">Some of My Works</h2>
+
+      <div class="project-card-grid card-grid">
+        <!--   project card goes here -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- //services  -->
+
+  <section class="service reveal" id="service">
+    <div class="section-container">
+      <h2 class="section-title">What I Do!</h2>
+      <p class="service-title">I help build modern responsive and fast scalable websites.</p>
+
+      <div class="service-card-grid card-grid">
+
+        <div class="services-card">
+          <i class="fas fa-code"></i>
+          <h3 class="service-card-title">Web Development</h3>
+          <div class="service-description">
+            <p>I build fast, responsive, and scalable websites tailored to your business needs.</p>
+          </div>
+        </div>
+
+        <div class="services-card">
+          <i class="fas fa-pen-nib"></i>
+          <h3 class="service-card-title">UI/UX Design</h3>
+          <div class="service-description">
+            <p>I design intuitive nd visually engaging interfaces that enhances user experiences. </p>
+          </div>
+        </div>
+
+        <div class="services-card">
+          <i class="fas fa-bolt"></i>
+          <h3 class="service-card-title">Fast Delivery</h3>
+          <div class="service-description">
+            <p> Efficient workflow ensuring your project is delivered on time and exceeds expectations.</p>
+          </div>
+        </div>
+
+        <div class="services-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3 class="service-card-title">Online Tutoring</h3>
+          <div class="service-description">
+            <p>Personalized tutoring sessions to help you understand concepts and improve skills.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- contact section -->
+
+  <section class="contact-section reveal" id="contact">
+    <div class="contact-section-container">
+      <h2 class="section-title">Let's Build Together</h2>
+      <p class="contact-text">I'm currently available for freelance work and feel free to work and grow together.</p>
+      <div class="contact-page">
+        <div class="contact-details">
+
+          <div class="row">
+            <span><i class="fas fa-location-dot"></i> </span>
+            <div class="row-column">
+              <span class="row-title">Address</span>
+              <span class="row-link"> Addis Ababa, Ethipia</span>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <span><i class="fas fa-envelope"></i> </span>
+            <div class="row-column">
+              <span class="row-title">Email</span>
+              <span class="row-link"> <a href="#">degieftise09@gmail.com</a></span>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <span><i class="fas fa-phone"></i> </span>
+            <div class="row-column">
+              <span class="row-title">Phone</span>
+              <span class="row-link">+251-92427-5434</span>
+            </div>
+          </div>
+
+          <div class="row">
+            <span><i class="fas fa-globe"></i> </span>
+            <div class="row-column">
+              <span class="row-title">Portfolio</span>
+              <span class="row-link"> <a href="#">https://portfolio</a></span>
+            </div>
+          </div>
+          <div class="line-breaker">
+            <hr>
+          </div>
+          <div class="social-contact-links">
+            <a href="https://www.linkedin.com/in/degife-tise-a42878351" rel="noopener" target="_blank" title="link"><i
+                class="fab fa-linkedin"></i></a>
+            <a href="https://orcid.org/0009-0002-9865-635X" rel="noopener" title="link" target="_blank"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61580377083812" rel="noopener" target="_blank"
+              title="link"><i class="fab fa-facebook"></i></a>
+          </div>
+
+        </div>
+
+        <div class="contact-form">
+          <form id="contact-form">
+            <p class="message"></p>
+            <!-- <p class="loader"></p> -->
+            <div class="input-group">
+              <label>Name <span>*</span></label>
+              <input type="text" name="name" placeholder="Enter Your name." required>
+            </div>
+
+
+            <div class="input-group">
+              <label>Email <span>*</span></label>
+              <input type="email" name="email" placeholder="Your Email address." required>
+            </div>
+
+            <div class="input-group">
+              <label>Subject <span>*</span></label>
+              <input type="text" name="title" placeholder="Contacting subject." required>
+            </div>
+
+            <div class="input-group">
+              <label>Message <span>*</span></label>
+              <textarea name="message" placeholder="Write your clear message." required></textarea>
+            </div>
+            <div class="input-group">
+              <input type="submit" value="Send Message">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- footer section -->
+
+  <footer class="footer-section">
+    <div class="footer-container">
+      <hr class="hr" />
+      <p>Built by me!</p>
+      <div class="right-container">
+        <p>&copy; <span class="copyright"></span> All right was reserved.</p>
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="/script.js"></script>
+
+</body>
+
+</html>
