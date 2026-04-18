@@ -27,7 +27,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
 
-     /*    observer.unobserve(entry.target); */
+        /*    observer.unobserve(entry.target); */
       }
     });
   },
@@ -81,7 +81,7 @@ const projects = [
     name: "Movie search app",
     image: "/image/movie.jpeg",
     overlay: "This is overlay text",
-    techStack: ["React", "CSS", "javascript", "OOdbe API"],
+    techStack: ["React", "CSS", "javascript", "OMDb API Integration"],
     github: "https://github.com/degifetise/movie-app",
     live: "https://movie-app-rho-ivory.vercel.app/",
   },
@@ -98,12 +98,12 @@ const projects = [
 
   {
     id: 4,
-    name: "My Personal Portfolio",
-    image: "/image/Screenshot_17-4-2026_135357_127.0.0.1.jpeg",
+    name: "Modern e-commerce websites",
+    image: "/image/techGadget.png",
     overlay: "This is overlay text",
-    techStack: ["HTML", "CSS", "javascript", "email.js"],
-    github: "https://github.com/degifetise/hawasa-eagle-turoial-websites",
-    live: "https://hawasa-eagle-turoial-websites.vercel.app",
+    techStack: ["HTML", "CSS", "javascript"],
+    github: "https://github.com/degifetise/Market-Online",
+    live: "https://market-online-pi.vercel.app/",
   },
 ];
 
@@ -165,26 +165,29 @@ projects.forEach((project) => {
 //contact form //
 
 (function () {
-  emailjs.init({
-    publicKey: "coKezY5VjE2p6lg7R",
-  });
+  emailjs.init("IpJLXRiFrh7P-J5ky");
 })();
 
 const form = document.getElementById("contact-form");
 const message = document.querySelector(".message");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  const name = form.elements["name"];
+  const email = form.elements["email"];
+  const subject = form.elements["title"];
+  const msg = form.elements["message"];
 
-  if (!form.name.value || !form.email.value || !form.message.value) {
+  if (!name || !email || !msg || !message) {
     message.innerHTML = "Please fill all required fields.";
     message.style.color = "red";
 
     setTimeout(() => {
       message.innerHTML = "";
     }, 3000);
+    return;
   }
   emailjs
-    .sendForm("service_ug2bykh", "template_4mvioyd", this)
+    .sendForm("service_ug2bykh", "template_gdknl0l", this)
     .then(() => {
       message.innerHTML = "Message sent successfully!";
       message.style.color = "green";
