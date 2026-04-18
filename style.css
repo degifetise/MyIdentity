@@ -2,6 +2,17 @@
   box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
 }
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--accent);
+  border-radius: 12px;
+}
+html::-webkit-scrollbar-thumb {
+background: #ff6b00;
+border-radius: 50%;
+}
 
 body.dark {
   --bg-main: #f8fafc;
@@ -581,9 +592,8 @@ body {
 .project-card .project-image {
   width: 100%;
   height: 220px;
-  margin-bottom: 15px;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .project-image img {
   width: 95%;
@@ -591,6 +601,7 @@ body {
   object-fit: cover;
   margin: auto;
   transition: 0.4s all ease-in-out;
+  border-radius: 15px;
 }
 .project-image img:hover {
   transform: scale(1.02);
@@ -764,9 +775,9 @@ body {
   padding: 1.2rem 0;
 }
 .contact-details .social-contact-links a {
-text-decoration: none;
-font-size: 1.5rem;
-color: var(--accent);
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--accent);
 }
 .contact-form {
   background: var(--bg-card);
@@ -823,8 +834,8 @@ color: var(--accent);
 }
 #contact-form .input-group input:focus,
 #contact-form .input-group textarea:focus {
-  border: 1px solid var(--text-main);
   box-shadow: var(--shadow-lg);
+  border-bottom: 0.2px solid #ff6b00;
 }
 
 #contact-form .input-group input::placeholder,
