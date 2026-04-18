@@ -2,6 +2,17 @@
   box-sizing: border-box;
   font-family: "Courier New", Courier, monospace;
 }
+html::-webkit-scrollbar {
+  width: 8px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--accent);
+  border-radius: 12px;
+}
+html::-webkit-scrollbar-thumb {
+background: #ff6b00;
+border-radius: 50%;
+}
 
 body.dark {
   --bg-main: #f8fafc;
@@ -590,7 +601,7 @@ body {
   object-fit: cover;
   margin: auto;
   transition: 0.4s all ease-in-out;
-border-radius: 15px;
+  border-radius: 15px;
 }
 .project-image img:hover {
   transform: scale(1.02);
