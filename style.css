@@ -313,10 +313,11 @@ body {
   opacity: 0.5;
   font-size: 1.2;
 }
-.header-content .title span {
+
+#typing {
   color: var(--text-main);
-  opacity: 1;
 }
+
 .header-content .sub-header {
   color: var(--text-muted);
   font-size: 1.2rem;
