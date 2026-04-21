@@ -48,6 +48,41 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+//typing text animation
+
+const typingElement = document.getElementById("typing");
+const roles = [
+  "Frontend developer",
+  "UI/UX Designer",
+  "Open Source Contributor",
+  "Online Tutor",
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  if (!isDeleting && charIndex < roles[roleIndex].length) {
+    typingElement.textContent += roles[roleIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else if (isDeleting && charIndex > 0) {
+    typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(typeEffect, 50);
+  } else {
+    if (!isDeleting && charIndex === roles[roleIndex].length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+    } else {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setTimeout(typeEffect, 10);
+    }
+  }
+}
+typeEffect();
 
 //light and dark toggle //
 const lightTheme = document.querySelector(".theme-toggle");
