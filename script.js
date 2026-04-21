@@ -21,13 +21,24 @@ backToTop.onclick = function () {
 
 //all section animation
 const sections = document.querySelectorAll(".reveal");
+const navLinks = document.querySelectorAll(".nav-links a");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
 
         /*    observer.unobserve(entry.target); */
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active-navbar");
+
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active-navbar");
+          }
+        });
       }
     });
   },
@@ -193,15 +204,15 @@ form.addEventListener("submit", function (e) {
       message.style.color = "green";
       setTimeout(() => {
         message.innerHTML = "";
+        form.reset();
       }, 3000);
-
-      form.reset();
     })
     .catch((error) => {
       message.innerHTML = "Failed to send message.";
       message.style.color = "red";
       setTimeout(() => {
         message.innerHTML = "";
+        form.reset();
       }, 3000);
 
       console.log(error);

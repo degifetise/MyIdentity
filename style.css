@@ -10,12 +10,12 @@ html::-webkit-scrollbar-track {
   border-radius: 12px;
 }
 html::-webkit-scrollbar-thumb {
-background: #ff6b00;
-border-radius: 50%;
+  background: #ff6b00;
+  border-radius: 50%;
 }
 
 body.dark {
-  --bg-main: #f8fafc;
+  --bg-main: #f5f5f5;
   --bg-card: #ffffff;
   --text-main: #0f172a;
   --text-muted: #64748b;
@@ -132,11 +132,39 @@ body {
   gap: 15px;
 }
 .nav-links li a {
+  position: relative;
   color: var(--text-main);
   font-weight: 400;
   text-decoration: none;
   transition: 0.3s all ease;
   font-size: 1rem;
+}
+.nav-links li a.active-navbar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background: #ff6b00;
+  color: #ff6b00;
+  border-radius: 5px;
+  animation: widthAnim 4s infinite;
+}
+@keyframes widthAnim {
+  0%,
+  100% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    width: 90%;
+    opacity: 1;
+  }
+}
+
+.nav-links li a.active-navbar {
+  color: #ff6b00;
 }
 .nav-links li a:hover {
   color: var(--accent);
@@ -212,7 +240,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  animation: img 4s infinite;
+  animation: img 7s infinite;
   border-radius: 50%;
 }
 @keyframes img {
@@ -220,11 +248,12 @@ body {
   50%,
   100% {
     transform: rotate(0deg);
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   25%,
   75% {
     transform: rotate(5deg);
+    transform: scale(1);
   }
 }
 .header-image {
@@ -751,7 +780,10 @@ body {
 }
 .contact-details .line-breaker {
   opacity: 0.4;
-  width: 90%;
+  width: 100%;
+}
+.contact-details .contact-sociials {
+  color: var(--text-muted);
 }
 .contact-details .social-contact-links {
   display: flex;
