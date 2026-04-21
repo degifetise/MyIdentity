@@ -27,7 +27,6 @@
   }
 }
 
-/*  MOBILE (<= 768px) */
 @media (max-width: 768px) {
   /* NAVBAR */
   .navbar {
@@ -50,9 +49,8 @@
     color: var(--text-main);
     text-align: center;
     padding: 2rem 0;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    transition: 0.3s all ease-in-out;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
   .nav-links.active {
     top: 2.5rem;
