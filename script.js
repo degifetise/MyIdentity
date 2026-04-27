@@ -42,7 +42,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.2 },
+  { threshold: 0.1 },
 );
 
 sections.forEach((section) => {
@@ -99,6 +99,28 @@ if (lightTheme) {
     }
   });
 }
+//skill useLayoutEffect(() => {
+const skills = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "React",
+  "Git",
+  "Github",
+  "PHP",
+  "MYSQL",
+  "Tailwind",
+  "OOP Java",
+];
+//skill language list
+
+const skillListContainer = document.querySelector(".skill-list");
+skills.forEach((skill) => {
+  let span = document.createElement("span");
+  span.textContent = skill;
+
+  skillListContainer.appendChild(span);
+});
 
 //nav bar section //
 
@@ -118,8 +140,8 @@ const projects = [
     image: "/image/E-commerce.png",
     overlay: "This is overlay text",
     techStack: ["CSS", "javascript", "React"],
-    github: "https://github.com/your-repo",
-    live: "https://your-site.vercel.app",
+    github: "https://github.com/degifetise/ecommerce-react-course-websites",
+    live: "https://ecommerce-react-course-websites.vercel.app/",
   },
 
   {
@@ -127,7 +149,7 @@ const projects = [
     name: "Movie search app",
     image: "/image/movie.jpeg",
     overlay: "This is overlay text",
-    techStack: ["React", "CSS", "javascript", "OMDb API Integration"],
+    techStack: ["React", "CSS", "javascript", "OMDb API"],
     github: "https://github.com/degifetise/movie-app",
     live: "https://movie-app-rho-ivory.vercel.app/",
   },
