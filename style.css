@@ -3,15 +3,15 @@
   font-family: "Courier New", Courier, monospace;
 }
 html::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 html::-webkit-scrollbar-track {
   background: var(--accent);
-  border-radius: 12px;
+  border-radius: 2px;
 }
 html::-webkit-scrollbar-thumb {
   background: #ff6b00;
-  border-radius: 50%;
+  border-radius: 5px;
 }
 
 body.dark {
@@ -115,6 +115,9 @@ body {
   flex-direction: column;
   gap: 5px;
 }
+.bar.bar-cross {
+display: none;
+}
 .bar span {
   cursor: pointer;
   width: 35px;
@@ -145,7 +148,6 @@ body {
 .nav-links li a.active-navbar::before {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -5px;
   width: 0%;
   height: 1px;
@@ -162,7 +164,7 @@ body {
   }
   50% {
     width: 90%;
-    opacity: 1;
+    opacity: 0.7;
   }
 }
 
@@ -328,22 +330,25 @@ body {
   gap: 20px;
 }
 .header-content .get-me-on-touch .call-to-action-text span {
+  position: relative;
   color: var(--text-main);
+  font-size: 1.2rem;
 }
+
 .get-me-on-touch .call-to-action-text span .animate-arrow {
   animation: translate 4s infinite;
   color: #efc123;
   font-size: 1.4rem;
 }
 @keyframes translate {
-  0% {
+  0%,
+  100% {
     transform: translateX(0);
+    opacity: 0;
   }
   50% {
     transform: translateX(130px);
-  }
-  100% {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 .get-me-on-touch .socials {
@@ -352,13 +357,13 @@ body {
 }
 .get-me-on-touch a {
   text-decoration: none;
-  color: var(-- accent);
+  color: var(--accent);
   font-size: 1.5rem;
-  transition: 0.3s all ease-in-out;
+  transition: 0.5s all ease-in-out;
 }
 .get-me-on-touch a:hover {
-  color: #efc123;
-  transform: translateY(-8px);
+  color: var(--text-main);
+  transform: translateY(-12px);
 }
 /*all section animation */
 
@@ -502,7 +507,7 @@ body {
 /*experience section styles */
 
 .experience-section {
-  padding: 80px 20px;
+  padding: 80px 20px 20px;
   background: var(--bg-main);
   width: 100%;
 }
