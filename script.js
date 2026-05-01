@@ -55,7 +55,7 @@ const roles = [
   "Frontend developer",
   "UI/UX Designer",
   "Open Source Contributor",
-  "Online Tutor",
+  "Online Tutorial Teach",
 ];
 
 let roleIndex = 0;
