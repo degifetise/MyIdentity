@@ -79,6 +79,21 @@ body {
     transform: translateY(-12px);
   }
 }
+#scroll-bottom {
+  display: block;
+  position: fixed;
+  opacity: 0.6;
+  bottom: 15px;
+  left: 15px;
+  background: #efc123;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: #fff;
+  animation: backTop 4s infinite;
+  z-index: 999;
+}
 
 .navbar {
   display: flex;

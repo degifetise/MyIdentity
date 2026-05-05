@@ -1,16 +1,9 @@
 //back to top button function
 
 const backToTop = document.getElementById("backToTop");
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    backToTop.style.display = "block";
-  } else {
-    backToTop.style.display = "none";
-  }
-};
+window.addEventListener("scroll", () => {
+  backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+});
 
 backToTop.onclick = function () {
   window.scroll({
@@ -19,6 +12,21 @@ backToTop.onclick = function () {
   });
 };
 
+const scrollBottom = document.getElementById("scroll-bottom");
+window.onscroll = function () {
+  if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+    scrollBottom.style.display = "block";
+  } else {
+    scrollBottom.style.display = "none";
+  }
+};
+
+scrollBottom.onclick = function () {
+  window.scroll({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+};
 //all section animation
 const sections = document.querySelectorAll(".reveal");
 const navLinks = document.querySelectorAll(".nav-links a");
@@ -66,7 +74,7 @@ function typeEffect() {
   if (!isDeleting && charIndex < roles[roleIndex].length) {
     typingElement.textContent += roles[roleIndex].charAt(charIndex);
     charIndex++;
-    setTimeout(typeEffect, 100);
+    setTimeout(typeEffect, 50);
   } else if (isDeleting && charIndex > 0) {
     typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
     charIndex--;
@@ -74,11 +82,11 @@ function typeEffect() {
   } else {
     if (!isDeleting && charIndex === roles[roleIndex].length) {
       isDeleting = true;
-      setTimeout(typeEffect, 1000);
+      setTimeout(typeEffect, 1500);
     } else {
       isDeleting = false;
       roleIndex = (roleIndex + 1) % roles.length;
-      setTimeout(typeEffect, 10);
+      setTimeout(typeEffect, 50);
     }
   }
 }
