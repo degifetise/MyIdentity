@@ -31,6 +31,7 @@
   /* NAVBAR */
   .navbar {
     top: 10px;
+    border-radius: 45px;
   }
   .navbar .bar {
     display: flex;
@@ -108,12 +109,19 @@
   .header-image .call-to-cation-btn {
     flex-direction: column;
   }
+
+  .exp-dot {
+    left: -37px;
+  }
 }
 
 /*  SMALL MOBILE (<= 480px) */
 @media (max-width: 480px) {
   .header-content .main-header {
     font-size: 1.5rem;
+  }
+  .exp-dot {
+    left: -34px;
   }
 
   .header-container .header-image .img-container {
