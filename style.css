@@ -641,6 +641,9 @@ body {
   overflow: hidden;
   border-radius: 15px;
 }
+.project-card:hover .project-image {
+  filter: brightness(0.5);
+}
 .project-image img {
   width: 95%;
   height: 100%;
