@@ -183,7 +183,7 @@ const projects = [
   },
   {
     id: 5,
-    name: "E-commerce Dashboard",
+    name: "Dashboard",
     image: "/image/Dash.jpeg",
     overlay: "Responsive single-file dashboard with cart and charts",
     techStack: ["HTML", "CSS", "JavaScript", "Font Awesome", "GSAP"],
