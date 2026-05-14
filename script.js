@@ -181,6 +181,15 @@ const projects = [
     github: "https://github.com/degifetise/Market-Online",
     live: "https://market-online-pi.vercel.app/",
   },
+  {
+    id: 5,
+    name: "E-commerce Dashboard",
+    image: "/image/Dash.jpeg",
+    overlay: "Responsive single-file dashboard with cart and charts",
+    techStack: ["HTML", "CSS", "JavaScript", "Font Awesome", "GSAP"],
+    github: "https://github.com/degifetise/ecommercedashboards",
+    live: "https://ecommercedashboards.vercel.app/",
+  },
 ];
 
 const projectGrid = document.querySelector(".project-card-grid");
