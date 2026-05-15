@@ -190,6 +190,16 @@ const projects = [
     github: "https://github.com/degifetise/ecommercedashboards",
     live: "https://ecommercedashboards.vercel.app/",
   },
+  {
+    id: 6,
+    name: "Lost & Found Web App",
+    image: "/image/lost-found.png",
+    description:
+      "A modern web app that allows users to post lost or found items, search products, filter by category, and contact item owners. Includes authentication, modals, and smooth GSAP animations.",
+    techStack: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "Font Awesome"],
+    github: "https://github.com/degifetise/LostFoundItem",
+    live: "lost-found-item-tau.vercel.app",
+  },
 ];
 
 const projectGrid = document.querySelector(".project-card-grid");
