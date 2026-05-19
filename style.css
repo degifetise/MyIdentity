@@ -797,7 +797,6 @@ body {
   max-width: 100%;
   margin: auto;
   background: var(--bg-main);
-  padding: 120px 20px;
 }
 .swiper-container {
   width: 100%;
