@@ -29,6 +29,11 @@ body.dark {
 
   --border-color: rgba(0, 0, 0, 0.05);
   --radius: 16px;
+
+  --accent-alt: #ec4899; /* Dark mode pink */
+  --success: #4ade80; /* Softer green */
+  --warning: #fde047; /* Warm yellow */
+  --info: #67e8f9;
 }
 :root {
   --bg-main: #0f172a;
@@ -42,6 +47,11 @@ body.dark {
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
 
   --border-color: rgba(255, 255, 255, 0.1);
+
+  --accent-alt: #f472b6; /* Soft pink */
+  --success: #22c55e; /* Modern green */
+  --warning: #facc15; /* Vibrant yellow */
+  --info: #06b6d4;
 }
 
 body {
@@ -218,13 +228,17 @@ body {
   background: var(--accent);
   padding: 0.5rem;
   transition: 0.3s all ease-in;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .resume-btn a {
   text-decoration: none;
   color: var(--bg-card);
 }
 .resume-btn:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+  background: var(--text-main);
+  color: var(--bg-main);
 }
 
 /* hero section */
@@ -293,12 +307,13 @@ body {
 .call-to-cation-btn .common {
   text-decoration: none;
   padding: 0.6rem 1rem;
-  border-radius: 45px;
   transition: 0.3s all ease-in-out;
 }
 .call-to-cation-btn .view-my-works {
   background: var(--accent);
   color: var(--text-main);
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 .call-to-cation-btn .view-my-works:hover {
   background: var(--text-main);
@@ -308,6 +323,8 @@ body {
   background: var(--text-main);
   color: var(--accent);
   padding: 0.6rem 2.2rem;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 .call-to-cation-btn .hire-me:hover {
   background: var(--accent);
@@ -335,6 +352,20 @@ body {
 #typing {
   color: var(--text-main);
 }
+
+
+#typing {
+  border-right: 2px solid #fff;
+  padding-right: 4px;
+}
+/* Gradient text style */
+.role-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent-alt);
+}
+
 
 .header-content .sub-header {
   color: var(--text-muted);
@@ -375,7 +406,34 @@ body {
   text-decoration: none;
   color: var(--accent);
   font-size: 1.5rem;
-  transition: 0.5s all ease-in-out;
+  display: inline-block;
+  animation: bounce 1.2s ease infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.get-me-on-touch .socials a:nth-child(1) {
+  animation-delay: 0s;
+}
+.get-me-on-touch .socials a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.get-me-on-touch .socials a:nth-child(3) {
+  animation-delay: 0.4s;
 }
 .get-me-on-touch a:hover {
   color: var(--text-main);
@@ -509,17 +567,6 @@ body {
   font-size: 0.95rem;
 }
 
-@keyframes fillAnim {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-  to {
-    opacity: 0.5;
-    width: var(--target-width);
-  }
-}
-
 /*experience section styles */
 
 .experience-section {
@@ -546,17 +593,20 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #ff6b00;
+  background: var(--accent);
   position: absolute;
   left: -45px;
   top: 50px;
-  border: 1px solid #1a1a1a;
+  border: none;
+  outline: none;
   padding: 15px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
+  color: #fff;
+  font-weight: 900;
 }
 .exp-content {
   background: var(--bg-card);
@@ -616,7 +666,7 @@ body {
   background: var(--bg-card);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-radius: 12px;
+  border-radius: 3px;
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
@@ -631,6 +681,8 @@ body {
   transform: translateY(-2px);
   border-bottom: none;
   border-left: 0.1rem solid #ff6b00;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
 }
 .project-card .project-title-solutions {
   color: var(--text-main);
@@ -653,7 +705,7 @@ body {
   border-radius: 15px;
 }
 .project-image img:hover {
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 
 .project-card .tech-stack {
