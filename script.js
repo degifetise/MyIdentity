@@ -50,7 +50,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 },
+  { threshold: 0.3 },
 );
 
 sections.forEach((section) => {
@@ -70,17 +70,21 @@ let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
+
 function typeEffect() {
-  if (!isDeleting && charIndex < roles[roleIndex].length) {
-    typingElement.textContent += roles[roleIndex].charAt(charIndex);
+  const currentRole = roles[roleIndex];
+  const spanClass = `role-${roleIndex}`;
+
+  if (!isDeleting && charIndex < currentRole.length) {
+    typingElement.innerHTML = `<span class="${spanClass}">${currentRole.substring(0, charIndex + 1)}</span>`;
     charIndex++;
     setTimeout(typeEffect, 50);
   } else if (isDeleting && charIndex > 0) {
-    typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+    typingElement.innerHTML = `<span class="${spanClass}">${currentRole.substring(0, charIndex - 1)}</span>`;
     charIndex--;
     setTimeout(typeEffect, 50);
   } else {
-    if (!isDeleting && charIndex === roles[roleIndex].length) {
+    if (!isDeleting && charIndex === currentRole.length) {
       isDeleting = true;
       setTimeout(typeEffect, 1500);
     } else {
@@ -90,7 +94,9 @@ function typeEffect() {
     }
   }
 }
+
 typeEffect();
+
 
 //light and dark toggle //
 const lightTheme = document.querySelector(".theme-toggle");
@@ -186,7 +192,7 @@ const projects = [
     name: "Dashboard",
     image: "/image/Dash.jpeg",
     overlay: "Responsive single-file dashboard with cart and charts",
-    techStack: ["HTML", "CSS", "JavaScript", "Font Awesome", "GSAP"],
+    techStack: ["HTML", "CSS", "JavaScript", "GSAP"],
     github: "https://github.com/degifetise/ecommercedashboards",
     live: "https://ecommercedashboards.vercel.app/",
   },
@@ -194,8 +200,9 @@ const projects = [
     id: 6,
     name: "Lost & Found Web App",
     image: "/image/image.png",
-    description: "A modern web app that allows users to post lost or found items, search products, filter by category, and contact item owners. Includes authentication, modals, and smooth GSAP animations.",
-    techStack: ["HTML", "Tailwind CSS", "JavaScript", "GSAP", "Font Awesome"],
+    description:
+      "A modern web app that allows users to post lost or found items, search products, filter by category, and contact item owners. Includes authentication, modals, and smooth GSAP animations.",
+    techStack: ["HTML", "Tailwind CSS", "JavaScript", "GSAP"],
     github: "https://github.com/degifetise/LostFoundItem",
     live: "https://lost-found-item-tau.vercel.app/",
   },
