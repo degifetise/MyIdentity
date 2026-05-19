@@ -315,3 +315,58 @@ const copyRight = document.querySelector(".copyright");
 const day = new Date();
 const year = day.getFullYear();
 copyRight.innerHTML = year;
+
+
+
+//people review 
+
+const reviews = [
+  {
+    text: "Degife delivered our dashboard project in record time with clean, modular code.",
+    author: "John joseph",
+    photo: "/images/noorain.jpg",
+  },
+  {
+    text: "His UI/UX designs are intuitive and responsive. Students loved the workshop.",
+    author: "HUWAI Programs Group",
+    photo: "/images/huwai.jpg",
+  },
+  {
+    text: "Professional, reliable, and creative. Highly recommended for freelance projects.",
+    author: "Peace Club Member",
+    photo: "/images/peaceclub.jpg",
+  },
+];
+
+
+const wrapper = document.getElementById("review-wrapper");
+
+reviews.forEach((review) => {
+  const slide = document.createElement("div");
+  slide.className = "swiper-slide";
+  slide.innerHTML = `
+    <div class="review-card">
+      <img src="${review.photo}" alt="${review.author}" class="review-photo"/>
+      <p>"${review.text}"</p>
+      <h4>- ${review.author}</h4>
+    </div>
+  `;
+  wrapper.appendChild(slide);
+});
+
+
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  effect: "fade", // smooth fade transition
+  fadeEffect: {
+    crossFade: true,
+  },
+  autoplay: {
+    delay: 4000, // 4 seconds delay
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

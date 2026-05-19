@@ -353,7 +353,6 @@ body {
   color: var(--text-main);
 }
 
-
 #typing {
   border-right: 2px solid #fff;
   padding-right: 4px;
@@ -363,9 +362,10 @@ body {
   background: linear-gradient(90deg, var(--accent), var(--accent-alt));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent-alt);
+  text-shadow:
+    0 0 10px var(--accent),
+    0 0 20px var(--accent-alt);
 }
-
 
 .header-content .sub-header {
   color: var(--text-muted);
@@ -792,6 +792,43 @@ body {
   width: 80%;
 }
 
+/*swiper section */
+.swiper-section {
+  max-width: 100%;
+  margin: auto;
+  background: var(--bg-main);
+  padding: 120px 20px;
+}
+.swiper-container {
+  width: 100%;
+  text-align: center;
+}
+.swiper-container h3 {
+font-size: 2rem;
+color: var(--accent);
+}
+.review-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.review-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+.review-card p {
+  font-style: italic;
+  color: var(--accent);
+}
+.review-card h4 {
+  margin-top: 10px;
+  color: var(--text-muted);
+}
 /* contact section styles starts here */
 
 .contact-section {
@@ -994,3 +1031,5 @@ body {
 .footer-container .right-container p {
   color: var(--accent);
 }
+
+/* swwiper css */
