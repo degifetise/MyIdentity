@@ -509,8 +509,9 @@ body {
   grid-gap: 10px;
 }
 .skill-title {
-  margin-top: 1rem;
-  color: var(--text-main);
+  margin: 2rem 0;
+  color: var(--accent);
+  font-size: 1.4rem;
 }
 .skill-list {
   display: grid;
@@ -518,15 +519,12 @@ body {
   grid-gap: 8px;
 }
 .skill-list span {
-  background: var(--text-muted);
+  background: var(--bg-main);
   color: var(--text-main);
   padding: 0.5rem 1.4rem;
   transition: 0.3s all ease-in-out;
   border-radius: 0.3rem;
   box-shadow: var(--shadow-sm);
-}
-.skill-list span:nth-child(odd) {
-  background: var(--accent);
 }
 
 .skill-list span:hover {
@@ -559,6 +557,7 @@ body {
   color: var(--text-muted);
   font-size: 1.2rem;
   font-weight: 900;
+  text-transform: capitalize;
 }
 
 .skill-percent {
@@ -794,29 +793,29 @@ body {
 
 /*swiper section */
 .swiper-section {
-  max-width: 100%;
+  max-width: 1000px;
   margin: auto;
   background: var(--bg-main);
-  padding: 120px 20px;
+  height: fit-content;
+  padding: 1rem;
 }
 .swiper-container {
-  width: 100%;
   text-align: center;
 }
 .swiper-container h3 {
-font-size: 2rem;
-color: var(--accent);
+  font-size: 2rem;
+  color: var(--accent);
 }
 .review-card {
   background: var(--bg-card);
-  padding: 40px;
+  padding: 60px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 .review-photo {
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 10px;
   object-fit: cover;
