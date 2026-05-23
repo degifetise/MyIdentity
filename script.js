@@ -324,17 +324,17 @@ const reviews = [
   {
     text: "Degife delivered our dashboard project in record time with clean, modular code.",
     author: "John joseph",
-    photo: "/images/noorain.jpg",
+    photo: "/image/degife.jpg",
   },
   {
     text: "His UI/UX designs are intuitive and responsive. Students loved the workshop.",
     author: "HUWAI Programs Group",
-    photo: "/images/huwai.jpg",
+    photo: "/image/degife.jpg",
   },
   {
     text: "Professional, reliable, and creative. Highly recommended for freelance projects.",
     author: "Peace Club Member",
-    photo: "/images/peaceclub.jpg",
+    photo: "/image/degife.jpg",
   },
 ];
 
@@ -348,7 +348,7 @@ reviews.forEach((review) => {
     <div class="review-card">
       <img src="${review.photo}" alt="${review.author}" class="review-photo"/>
       <p>"${review.text}"</p>
-      <h4>- ${review.author}</h4>
+      <h4> ${review.author}</h4>
     </div>
   `;
   wrapper.appendChild(slide);
@@ -357,12 +357,12 @@ reviews.forEach((review) => {
 
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  effect: "fade", // smooth fade transition
+  effect: "fade", 
   fadeEffect: {
     crossFade: true,
   },
   autoplay: {
-    delay: 4000, // 4 seconds delay
+    delay: 4000, 
     disableOnInteraction: false,
   },
   pagination: {
