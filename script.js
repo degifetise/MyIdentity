@@ -70,7 +70,6 @@ let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-
 function typeEffect() {
   const currentRole = roles[roleIndex];
   const spanClass = `role-${roleIndex}`;
@@ -96,7 +95,6 @@ function typeEffect() {
 }
 
 typeEffect();
-
 
 //light and dark toggle //
 const lightTheme = document.querySelector(".theme-toggle");
@@ -205,6 +203,16 @@ const projects = [
     techStack: ["HTML", "Tailwind CSS", "JavaScript", "GSAP"],
     github: "https://github.com/degifetise/LostFoundItem",
     live: "https://lost-found-item-tau.vercel.app/",
+  },
+  {
+    id: 7,
+    name: "E-commerce Shop",
+    image: "/image/new.jpeg",
+    description:
+      "React-based ecommerce shop with checkout, payment receipt, and animated UI.",
+    techStack: ["React", "TailwindCSS", "Framer Motion", "jsPDF"],
+    live: "https://cosmo-gebeya.vercel.app/", // live demo
+    github: "https://github.com/degifetise/CosmoGebeya", // source code
   },
 ];
 
@@ -316,9 +324,7 @@ const day = new Date();
 const year = day.getFullYear();
 copyRight.innerHTML = year;
 
-
-
-//people review 
+//people review
 
 const reviews = [
   {
@@ -338,7 +344,6 @@ const reviews = [
   },
 ];
 
-
 const wrapper = document.getElementById("review-wrapper");
 
 reviews.forEach((review) => {
@@ -354,15 +359,14 @@ reviews.forEach((review) => {
   wrapper.appendChild(slide);
 });
 
-
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  effect: "fade", 
+  effect: "fade",
   fadeEffect: {
     crossFade: true,
   },
   autoplay: {
-    delay: 4000, 
+    delay: 4000,
     disableOnInteraction: false,
   },
   pagination: {
